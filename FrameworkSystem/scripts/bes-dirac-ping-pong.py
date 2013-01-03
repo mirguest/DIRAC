@@ -24,6 +24,7 @@ def pongCB( msgObj ):
   """
   pongid = msgObj.id
   print "RECEIVED PONG %d" % pongid
+  time.sleep( 1 )
   return sendPingMsg( msgObj.msgClient, pongid + 1 )
 
 def disconnectedCB( msgClient ):
